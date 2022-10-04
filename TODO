@@ -1,0 +1,13 @@
++ Failed uploads don't seem to want to be deleted properly
+# The error notification email has attachment called failed_uploads.csv
+# For example, it contained a recording successfully uploaded and processed 
+# but un-deleted on BB and un-renamed on PPTO
+
++ Add bit to manual run enabling to run on single course instead of all 
+# Functionality already implemented
+
++ Failure case: folder<>course_id saved in file but folder is actually gone from panopto. What then? 
+# folderName_folderId_pairs.json contains the PPTO folders matched with the respective course labels
+# The json file is updated with new mappings as new items at each run when it searches the PPTO folders 
+# Items are never removed but only added. We end up with legacy mappings if the folder is gone from PPTO
+# Failure: eligible recordings should be migrated to a PPTO folder that was deleted in error
